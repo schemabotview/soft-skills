@@ -1,0 +1,12 @@
+/* Soft Skills' design surface — the three tokens @graphlearning/shell leaves to the repo.
+   Imported AFTER the shell's stylesheet in main.tsx, so these win the cascade.
+
+   Every other concept in the catalog is a technology and wears its vendor colour (Python blue, dbt
+   coral, Snowflake cyan, Spark orange). This one is about a person, so it takes the lane none of
+   them use: amethyst, paired with a warm gold. The pairing is also the concept's own argument —
+   the cool tone is the structure, the warm one is the human underneath it. */
+:root {
+  --brand: #9d7cf4; /* amethyst — eyebrow, links, the catalog card tint */
+  --brand-hover: #b7a0f8; /* lighter amethyst — the eyebrow's hover state */
+  --accent-2: #ffcf70; /* warm gold — the slide's `###` subheading */
+}
