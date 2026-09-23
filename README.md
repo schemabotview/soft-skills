@@ -5,6 +5,11 @@ diagram, table or script card; the right pane is a slide; each section is one na
 
 > For the IT professional who has the right answer and still loses the room.
 
+**Nine courses, 90 sections, 0 wavs** — live at **[graphl.in/soft-skills](https://graphl.in/soft-skills/)**.
+Narration is written but not yet recorded, so the audio control is inert and each section requests a
+wav that is not there. Deploy is the standard Pages workflow: push to `main`, and
+`.github/workflows/deploy.yml` builds and publishes `dist/`.
+
 ## The model
 
 **concept ⊃ course ⊃ section.** A section is the atomic unit of a video — one scene, one slide, one
