@@ -9,7 +9,7 @@ today.
 
 Right now I'm at EDF, where I lead the data engineering on the metering platform. Smart meter
 readings and generation telemetry come off Kafka into a Databricks lakehouse on AWS, and come out
-the other end as the analytics the business runs on and the reporting Ofgem requires. That's **2.5
+the other end as the analytics the business runs on and the reporting Ofgem requires. That's **2
 million** meter reads a day, continuously. I also own production release governance for the team
 of six.
 
