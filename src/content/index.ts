@@ -2,6 +2,7 @@ import { selfAwareness } from './self-awareness'
 import { listening } from './listening'
 import { speaking } from './speaking'
 import { writing } from './writing'
+import { teamwork } from './teamwork'
 import type { Course, Section } from './types'
 
 // Course registry, in syllabus order (SOFT-SKILLS-COURSE-PLAN.md, one chapter = one course).
@@ -10,6 +11,7 @@ export const COURSES: Record<string, Course> = {
   [listening.id]: listening,
   [speaking.id]: speaking,
   [writing.id]: writing,
+  [teamwork.id]: teamwork,
 }
 
 export type { Course, Section }
