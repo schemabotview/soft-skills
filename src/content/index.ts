@@ -1,9 +1,11 @@
 import { selfAwareness } from './self-awareness'
+import { listening } from './listening'
 import type { Course, Section } from './types'
 
 // Course registry, in syllabus order (SOFT-SKILLS-COURSE-PLAN.md, one chapter = one course).
 export const COURSES: Record<string, Course> = {
   [selfAwareness.id]: selfAwareness,
+  [listening.id]: listening,
 }
 
 export type { Course, Section }
