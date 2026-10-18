@@ -24,11 +24,14 @@ Names are deliberately varied and gender-neutral in use; narration says **they/t
 
 | id | person | role in the dashboard project |
 | --- | --- | --- |
-| `priya` | Priya | business partner who asked for the dashboard |
+| `priya` | Priya | business partner and sponsor who asked for the dashboard; London |
 | `sam` | Sam | analyst building it; the learner's main point of view |
-| `jordan` | Jordan | data engineer who owns the delayed data source |
+| `jordan` | Jordan | data engineer who owns the delayed data source; Toronto |
 | `alex` | Alex | team lead and support owner |
-| `mei` | Mei | new team member, joins mid-project |
+| `mei` | Mei | new team member, joins mid-project; Singapore |
+
+An unnamed **director** appears in `presenting` and `influence` as the person who decides the
+rollout; they get a plain card (`external`, `scale`), not a cast entry.
 
 The contrasting settings from the syllabus (a student group project, a customer-support handover) get
 their own small casts where they appear, so the main story is not overloaded.
@@ -116,8 +119,11 @@ padding, or mark it `density-accept` with the reason.
    ```
 
    Calibration decided: keep the template's 12.4 (reasons in `CLAUDE.md`).
-2. **Courses 2–12, one commit per course**, in syllabus order, each with scenes, slides, narration, a
-   `titles.json` entry, a passing density run and a contact-sheet review.
+2. **Courses 2–12, one commit per course. Done.** All 76 sections are authored in syllabus order,
+   each course with scenes, slides, narration and a `titles.json` entry. `npm run density` passes all
+   76 frames, and every course was reviewed by eye on a contact sheet. The story runs on through the
+   later courses: the launch-date conflict (ch. 9), the rollout presentation (ch. 10), a proposed
+   15:00 load and its one-month trial (ch. 11), and the trial's end as the setback in ch. 12.
 3. **Audio** — one Colab + Chatterbox pass per finished course.
 4. **Deploy** — enable Pages, add the `catalog.json` listing in `ui-graphl`.
 

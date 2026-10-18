@@ -40,14 +40,84 @@ people come from one shared module so each person looks the same in every course
 **Scene inventory** (`src/scenes/<course>/`, one scene per section; `shared/people.ts` holds each
 person's pattern and icon):
 
-| scene | course · section | shape |
-| --- | --- | --- |
-| `behaviours-in-context` | self-awareness · behaviours-in-context | behaviours, not traits, context |
-| `strengths-evidence` | self-awareness · evidence-of-strengths | comparison: label → evidence table |
-| `observation-interpretation` | self-awareness · observation-vs-interpretation | anatomy of one message |
-| `three-responses` | self-awareness · triggers-and-responses | two (here three) responses |
-| `perspective` | self-awareness · perspective-taking | two views, the bridging exchange |
-| `assertive-boundaries` | self-awareness · assertiveness-and-boundaries | comparison table + anatomy of a reply |
+| scene | course · section |
+| --- | --- |
+| `behaviours-in-context` | self-awareness · behaviours-in-context |
+| `strengths-evidence` | self-awareness · evidence-of-strengths |
+| `observation-interpretation` | self-awareness · observation-vs-interpretation |
+| `three-responses` | self-awareness · triggers-and-responses |
+| `perspective` | self-awareness · perspective-taking |
+| `assertive-boundaries` | self-awareness · assertiveness-and-boundaries |
+| `listen-to-understand` | listening · listening-to-understand |
+| `question-types` | listening · question-types |
+| `paraphrase` | listening · paraphrase-and-summarise |
+| `needs-constraints` | listening · needs-and-constraints |
+| `across-backgrounds` | listening · across-backgrounds |
+| `cues-silence` | listening · cues-and-silence |
+| `confirm-next-steps` | listening · confirming-next-steps |
+| `main-point` | speaking · main-point |
+| `structure` | speaking · structure |
+| `plain-explanations` | speaking · plain-explanations |
+| `specific-requests` | speaking · specific-requests |
+| `dont-know` | speaking · saying-i-dont-know |
+| `disagree` | speaking · respectful-disagreement |
+| `channels` | writing · choosing-a-channel |
+| `message-anatomy` | writing · message-structure |
+| `status-update` | writing · status-updates |
+| `decision-record` | writing · decision-records |
+| `time-zones` | writing · async-and-time-zones |
+| `before-send` | writing · before-you-send |
+| `working-agreements` | teamwork · working-agreements |
+| `trust-repair` | teamwork · trust-and-repair |
+| `psychological-safety` | teamwork · psychological-safety |
+| `inclusive-participation` | teamwork · inclusive-participation |
+| `meetings` | teamwork · productive-meetings |
+| `knowledge-credit` | teamwork · knowledge-and-credit |
+| `handovers` | teamwork · handovers |
+| `ownership-authority` | ownership · ownership-and-authority |
+| `priorities` | ownership · prioritising |
+| `next-actions` | ownership · next-actions |
+| `capacity` | ownership · realistic-capacity |
+| `renegotiate` | ownership · renegotiating |
+| `follow-through` | ownership · follow-through |
+| `framing` | problem-solving · framing |
+| `facts-assumptions` | problem-solving · facts-and-assumptions |
+| `alternatives` | problem-solving · alternatives |
+| `option-table` | problem-solving · option-comparison |
+| `biases` | problem-solving · biases |
+| `reversible` | problem-solving · reversible-decisions |
+| `revisiting` | problem-solving · revisiting |
+| `feedback-purpose` | feedback · feedback-purpose |
+| `sbi` | feedback · situation-behaviour-impact |
+| `intent` | feedback · asking-about-intent |
+| `receiving` | feedback · receiving-feedback |
+| `next-step` | feedback · agreeing-next-steps |
+| `power-accuracy` | feedback · power-and-accuracy |
+| `conflict-types` | conflict · conflict-types |
+| `preparing` | conflict · preparing |
+| `opening` | conflict · opening-the-conversation |
+| `positions-interests` | conflict · positions-and-interests |
+| `options-criteria` | conflict · options-and-criteria |
+| `batna` | conflict · alternatives-to-agreement |
+| `routes` | conflict · escalation-routes |
+| `central-message` | presenting · audience-and-message |
+| `project-story` | presenting · project-story |
+| `annotated-visual` | presenting · evidence-and-visuals |
+| `rehearsal` | presenting · rehearsal-and-delivery |
+| `answering` | presenting · handling-questions |
+| `closing` | presenting · closing |
+| `leading-behaviours` | influence · leadership-as-behaviour |
+| `stakeholders` | influence · stakeholders |
+| `consulting` | influence · building-support |
+| `coordinating` | influence · coordinating |
+| `mentoring` | influence · mentoring |
+| `ethical-influence` | influence · ethical-influence |
+| `change-response` | growth · responding-to-change |
+| `improvement-note` | growth · learning-and-feedback |
+| `mentoring-request` | growth · relationships-and-mentoring |
+| `star-answer` | growth · career-conversations |
+| `timeline` | growth · integrated-case |
+| `sustainable` | growth · sustainable-practice |
 
 The shell's catalog throws on an empty course registry, so a repo can never sit at zero courses.
 
@@ -148,6 +218,12 @@ This course shows conversations and messages, not systems. Rendered side by side
   consequence in **two** columns instead.
 - **Tables** right-align cells in monospace: fine for option comparisons, poor for speech.
 - **List cards** suit questions and options, but items render small (14px); keep to 3–5 items.
+- **Two columns side by side**: a parent container with `cols: 2` holding two `cols: 1` containers
+  (weak reply / better reply, telling / asking). This is the fix for a tall, narrow board and for
+  unequal columns; keep the two columns within one card of each other in length, or the short one
+  floats and the whole board shrinks.
+- **A card row above a nested pair** (an audience row of three over two columns) shrinks every card
+  in the frame; drop the row and say it in the slide.
 - **Code cards are not for prose.** The tokenizer colours English words such as "and" and "when" as
   keywords. Show a message as a set of cards, one per part (opening, update, request).
 
