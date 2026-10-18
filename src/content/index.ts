@@ -4,6 +4,7 @@ import { speaking } from './speaking'
 import { writing } from './writing'
 import { teamwork } from './teamwork'
 import { ownership } from './ownership'
+import { problemSolving } from './problem-solving'
 import type { Course, Section } from './types'
 
 // Course registry, in syllabus order (SOFT-SKILLS-COURSE-PLAN.md, one chapter = one course).
@@ -14,6 +15,7 @@ export const COURSES: Record<string, Course> = {
   [writing.id]: writing,
   [teamwork.id]: teamwork,
   [ownership.id]: ownership,
+  [problemSolving.id]: problemSolving,
 }
 
 export type { Course, Section }
