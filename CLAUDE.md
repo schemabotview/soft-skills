@@ -37,8 +37,19 @@ The recurring example is a small team delivering a reporting dashboard for a bus
 people come from one shared module so each person looks the same in every course (see
 `AUTHORING-PLAN.md` for the cast). Refer to every person by name or **they/them**.
 
-**Scene inventory:** none yet. The template's `demo` course is still registered only because the
-shell's catalog throws on an empty registry; it is deleted when `self-awareness` lands.
+**Scene inventory** (`src/scenes/<course>/`, one scene per section; `shared/people.ts` holds each
+person's pattern and icon):
+
+| scene | course · section | shape |
+| --- | --- | --- |
+| `behaviours-in-context` | self-awareness · behaviours-in-context | behaviours, not traits, context |
+| `strengths-evidence` | self-awareness · evidence-of-strengths | comparison: label → evidence table |
+| `observation-interpretation` | self-awareness · observation-vs-interpretation | anatomy of one message |
+| `three-responses` | self-awareness · triggers-and-responses | two (here three) responses |
+| `perspective` | self-awareness · perspective-taking | two views, the bridging exchange |
+| `assertive-boundaries` | self-awareness · assertiveness-and-boundaries | comparison table + anatomy of a reply |
+
+The shell's catalog throws on an empty course registry, so a repo can never sit at zero courses.
 
 ## Invariants — do not break
 
@@ -105,9 +116,12 @@ the eyebrow.
 that is sparse on purpose carries `// density-accept: <reason>` in its section file. The two ratios
 come from one repo's ~80 frames of diagram-and-code-card boards. Targets, not thresholds.
 
-Calibration: the `check` slide model is the template's (12.4 px per character). In `apache-airflow`
-it ran 10–15 % high and that repo moved to 12.0 after measuring 13 slides. Re-measure here during the
-pilot before changing it; until then author to **940–995 modelled px**, then confirm with `density`.
+Calibration (measured in the `self-awareness` pilot): **keep 12.4 here.** `apache-airflow` moved to
+12.0 because its model ran 10–15 % high on every slide. This repo's slides are prose-heavier and the
+model is not consistently high: one slide modelled 956px and rendered 1004px (0.93), while others ran
+up to 18 % high. At 12.0 that first slide would pass the cap and clip. Author to **940–995 modelled
+px**; slides that render under 0.80 at the cap usually have one-line bullets the model counts as two,
+so shorten those and add a real point rather than raising the cap.
 
 Engine behaviours found in `apache-airflow` (flow 1.3.0), which apply here unchanged:
 - A container with `edges` **ignores `cols`** and stacks its children in one line. For a 2×2 of
@@ -127,8 +141,11 @@ Engine behaviours found in `apache-airflow` (flow 1.3.0), which apply here uncha
 ### Dialogue and written artefacts (probed for this repo)
 
 This course shows conversations and messages, not systems. Rendered side by side:
-- **Cards** — speaker as `label`, a short quote as `sub` — read best. `check` holds a sub to ~4
-  wrapped lines of ~20 characters, so keep a quote under ~70 characters.
+- **Cards** — speaker as `label`, a short quote as `sub` — read best. `check` still models the
+  template's fixed card: a one-line label (≤12 characters) leaves room for a quote of **~55
+  characters**; a two-line label leaves **~40**. Shorten the label first (`Options`, not `Offer options`).
+- **Three columns of quote cards** shrink the quotes below reading size. Put each reply beside its
+  consequence in **two** columns instead.
 - **Tables** right-align cells in monospace: fine for option comparisons, poor for speech.
 - **List cards** suit questions and options, but items render small (14px); keep to 3–5 items.
 - **Code cards are not for prose.** The tokenizer colours English words such as "and" and "when" as

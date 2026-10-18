@@ -103,9 +103,19 @@ padding, or mark it `density-accept` with the reason.
 
 ## 6. Order of work
 
-1. **Pilot — course 1 `self-awareness` (6 sections).** Shared cast, six scenes covering at least three
-   board shapes, slides, narration; delete the demo course. Measure the slide model against rendered
-   heights and decide on recalibration. Hand over the routes with the density report and screenshots.
+1. **Pilot — course 1 `self-awareness` (6 sections). Done, awaiting review.** Shared cast, six scenes
+   using all four shapes, slides, narration; demo course deleted. All six pass `density`:
+
+   ```
+   PASS  0.80  0.89  0.67  clear  self-awareness-behaviours-in-context
+   PASS  0.80  0.89  0.70  clear  self-awareness-evidence-of-strengths
+   PASS  0.93  0.89  0.68  clear  self-awareness-observation-vs-interpretation
+   PASS  0.85  0.89  0.62  clear  self-awareness-triggers-and-responses
+   PASS  0.83  0.89  0.69  clear  self-awareness-perspective-taking
+   PASS  0.84  0.89  0.73  clear  self-awareness-assertiveness-and-boundaries
+   ```
+
+   Calibration decided: keep the template's 12.4 (reasons in `CLAUDE.md`).
 2. **Courses 2–12, one commit per course**, in syllabus order, each with scenes, slides, narration, a
    `titles.json` entry, a passing density run and a contact-sheet review.
 3. **Audio** — one Colab + Chatterbox pass per finished course.
@@ -116,5 +126,4 @@ padding, or mark it `density-accept` with the reason.
 - **Brand**: `--brand #e8590c` (warm orange), `--accent-2 #66d9e8` (cyan).
 - **Course ids** in `CLAUDE.md` — they become public URLs.
 - **The cast**: names and roles above.
-- **Slide-model calibration**: keep 12.4 until the pilot measures it, or adopt `apache-airflow`'s 12.0
-  now.
+- ~~Slide-model calibration~~ — decided in the pilot: keep 12.4.

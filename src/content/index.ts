@@ -1,11 +1,9 @@
-import { demo } from './demo'
+import { selfAwareness } from './self-awareness'
 import type { Course, Section } from './types'
 
-// Course registry, in syllabus order (SOFT-SKILLS-COURSE-PLAN.md, one chapter = one course). The
-// template's `demo` course stays only until the first course lands: the shell's catalog throws on an
-// empty registry. Delete it then (src/content/demo, src/scenes/demo, public/audio/demo, titles.json).
+// Course registry, in syllabus order (SOFT-SKILLS-COURSE-PLAN.md, one chapter = one course).
 export const COURSES: Record<string, Course> = {
-  [demo.id]: demo,
+  [selfAwareness.id]: selfAwareness,
 }
 
 export type { Course, Section }
