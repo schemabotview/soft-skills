@@ -7,6 +7,7 @@ import { ownership } from './ownership'
 import { problemSolving } from './problem-solving'
 import { feedback } from './feedback'
 import { conflict } from './conflict'
+import { presenting } from './presenting'
 import type { Course, Section } from './types'
 
 // Course registry, in syllabus order (SOFT-SKILLS-COURSE-PLAN.md, one chapter = one course).
@@ -20,6 +21,7 @@ export const COURSES: Record<string, Course> = {
   [problemSolving.id]: problemSolving,
   [feedback.id]: feedback,
   [conflict.id]: conflict,
+  [presenting.id]: presenting,
 }
 
 export type { Course, Section }
