@@ -9,6 +9,7 @@ import { feedback } from './feedback'
 import { conflict } from './conflict'
 import { presenting } from './presenting'
 import { influence } from './influence'
+import { growth } from './growth'
 import type { Course, Section } from './types'
 
 // Course registry, in syllabus order (SOFT-SKILLS-COURSE-PLAN.md, one chapter = one course).
@@ -24,6 +25,7 @@ export const COURSES: Record<string, Course> = {
   [conflict.id]: conflict,
   [presenting.id]: presenting,
   [influence.id]: influence,
+  [growth.id]: growth,
 }
 
 export type { Course, Section }
