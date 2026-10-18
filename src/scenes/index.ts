@@ -9,11 +9,12 @@ import { problemSolvingScenes } from './problem-solving'
 import { feedbackScenes } from './feedback'
 import { conflictScenes } from './conflict'
 import { presentingScenes } from './presenting'
+import { influenceScenes } from './influence'
 
 // Scene registry. Sections reference scenes by id; scenes are grouped by course (one folder each,
 // mirroring src/content). Ids are globally unique across courses, so the flat lookup below is
 // unambiguous. Courses are added here as each is authored.
-const ALL: Scene[] = [...selfAwarenessScenes, ...listeningScenes, ...speakingScenes, ...writingScenes, ...teamworkScenes, ...ownershipScenes, ...problemSolvingScenes, ...feedbackScenes, ...conflictScenes, ...presentingScenes]
+const ALL: Scene[] = [...selfAwarenessScenes, ...listeningScenes, ...speakingScenes, ...writingScenes, ...teamworkScenes, ...ownershipScenes, ...problemSolvingScenes, ...feedbackScenes, ...conflictScenes, ...presentingScenes, ...influenceScenes]
 
 export const SCENES: Record<string, Scene> = Object.fromEntries(ALL.map((s) => [s.id, s]))
 
